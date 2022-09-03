@@ -67,3 +67,12 @@
 //5 -> 2, 4
 //8 -> 2, 4, 6, 8
 
+Console.WriteLine("Введите число: ");
+int h = int.Parse(Console.ReadLine());
+int startNumber = 1;
+int i = 0;
+for (i = startNumber; i <= h; i++) {
+    if(i % 2 == 0){
+        Console.WriteLine("Четное число: "+ i);
+    }
+}
