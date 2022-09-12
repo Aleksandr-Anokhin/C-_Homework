@@ -3,7 +3,7 @@
 // Например:
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
-/*
+
 Console.WriteLine("Введите число A: ");
 int A = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите число B: ");
@@ -13,14 +13,14 @@ int i = 1;
 for (i = 1; i < B; i++)
 
 Console.WriteLine($"{A}^{B} = {Math.Pow(A,B)}");
-*/
+
 
 // Задача 27: Напишите программу, которая принимает на вход число и 
 // выдаёт сумму цифр в числе.
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
-/*
+
 Console.WriteLine("Введите число N: ");
 int N = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine($"Сумма цифр числа равна: {GetSumNumbers(N)}");
@@ -34,11 +34,22 @@ int GetSumNumbers(int N)
     }  
     return sum; 
 }
-*/
+
 
 //Задача 29: Напишите программу, которая задаёт массив из 8 элементов и 
 // выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
 // 6, 1, 33 -> [6, 1, 33]
 
+int[] GetBinaryArray(int size)
+{
+    int[] array = new int[size]; 
+    for (int i = 0; i < array.Length; i++) 
+    {
+        array[i] = new Random().Next(99); // Next(99) => от 0 до 99
+    }
+    return array;
+}
+int[] resultArray = GetBinaryArray(8);
 
+Console.WriteLine($"Result array: [ {String.Join("; ", resultArray)} ]");
